@@ -11,7 +11,7 @@
 <body class="bg-black text-gray-100 min-h-screen">
 
   <!-- CABEÇALHO -->
-  <header class="bg-blue-700 text-white">
+  <header class=" bg-blue-700 text-white">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
 
       <h1 class="text-xl md:text-3xl lg:text-4xl font-bold">
@@ -29,28 +29,28 @@
   <main class="max-w-7xl mx-auto px-4 py-6">
 
     <!-- GRID RESPONSIVO -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
       <!-- COLUNA ESQUERDA -->
-      <section class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 space-y-4">
+      <section class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 space-y-4 lg:sticky top-1 self-start">   <!-- lg: sticky top-1 self-start esse comando fixa a barra de pesquisa, onde so as tarefas descem  -->
 
         <!-- FORMULÁRIO -->
-        <form class="flex flex-col gap-3">
+        <form class="flex flex-col gap-3 ">
 
           <input
             type="text"
             placeholder="Nova tarefa"
-            class="w-full min-w-0 bg-gray-900 text-white border border-gray-700 rounded-lg px-3 py-3 focus:outline-none focus:border-green-500"
+            class="w-full min-w-0 bg-gray-900 text-white border border-gray-700 rounded-lg px-3 py-3 focus:outline-none focus:border-blue-500"
           >
 
           <input
             type="date"
-            class="w-full min-w-0 bg-gray-900 text-white border border-gray-700 rounded-lg px-3 py-3"
+            class="w-full min-w-0 bg-gray-900 text-blue-200 border border-gray-700 rounded-lg px-3 py-3"
           >
 
           <button
             type="button"
-            class="w-full bg-blue-600 text-white rounded-lg px-4 py-3 font-semibold hover:bg-blue-500 transition"
+            class="w-full bg-blue-600 text-white rounded-lg px-4 py-3 font-semibold hover:bg-blue-400 transition duration-6000"
           >
             Adicionar
           </button>
@@ -61,7 +61,7 @@
         <input
           type="search"
           placeholder="Pesquisar tarefa..."
-          class="w-full min-w-0 bg-gray-900 text-white border border-gray-700 rounded-lg px-3 py-3 focus:outline-none focus:border-green-500"
+          class="w-full min-w-0 bg-gray-900 text-white border border-gray-700 rounded-lg px-3 py-3 focus:outline-none focus:border-blue-500"
         >
 
         <!-- FILTROS -->
@@ -106,8 +106,8 @@
                 class="mt-1 w-5 h-5 shrink-0 accent-blue-500"
               >
 
-              <span class="min-w-0 break-words">
-                <span class="block font-medium">
+              <span class="min-w-0 flex flex-col">
+                <span class="line-through">   <!-- line-through  esse comando risca a tarefa no meio -->
                   Trabalho de História
                 </span>
                 <span class="text-sm text-gray-400">
@@ -144,8 +144,8 @@
                 class="mt-1 w-5 h-5 shrink-0 accent-green-500"
               >
 
-              <span class="min-w-0 break-words">
-                <span class="block font-medium">
+              <span class="min-w-0 flex flex-col">
+                <span class="line-through">
                   Estudar para a prova de Matemática
                 </span>
                 <span class="text-sm text-gray-400">
@@ -183,8 +183,8 @@
                 class="mt-1 w-5 h-5 shrink-0 accent-green-500"
               >
 
-              <span class="min-w-0 break-words">
-                <span class="block font-medium text-white">
+              <span class="min-w-0 flex flex-col">
+                <span class="line-through text-white">
                   Entregar projeto no GitHub
                 </span>
                 <span class="text-sm text-gray-400">
@@ -211,12 +211,391 @@
 
             </div>
           </li>
+      <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
 
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 flex flex-col">
+                <span class="line-through">
+                  Fazer exercícios de Python
+                </span>
+                <span class="text-sm text-gray-400">
+                  24/10/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+                <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                  Estudar Banco de Dados
+                </span>
+                <span class="text-sm text-gray-400">
+                  25/10/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+                <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                  Revisar conteúdo de Redes
+                </span>
+                <span class="text-sm text-gray-400">
+                  26/10/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+                <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                 Fazer resumo de Biologia
+                </span>
+                <span class="text-sm text-gray-400">
+                  28/10/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+            <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                 Estudar para a prova de História
+                </span>
+                <span class="text-sm text-gray-400">
+                  29/10/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+
+            <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                 Praticar exercícios de JavaScript
+                </span>
+                <span class="text-sm text-gray-400">
+                  30/10/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+
+            <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                 Fazer atividade de Geografia
+                </span>
+                <span class="text-sm text-gray-400">
+                  31/10/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+
+            <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                 Revisar lógica de programação
+                </span>
+                <span class="text-sm text-gray-400">
+                  01/11/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+
+            <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                  Organizar anotações do SENAI
+                </span>
+                <span class="text-sm text-gray-400">
+                  02/11/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+
+            <li class="min-w-0 bg-gray-950 border border-gray-800 rounded-xl shadow p-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+            <label class="flex items-start gap-3 min-w-0">
+              <input
+                type="checkbox"
+                class="mt-1 w-5 h-5 shrink-0 accent-green-500"
+              >
+
+              <span class="min-w-0 break-words">
+                <span class="block font-medium">
+                 Fazer exercícios de probabilidade
+                </span>
+                <span class="text-sm text-gray-400">
+                  03/11/2026
+                </span>
+              </span>
+            </label>
+
+            <div class="flex gap-2 md:shrink-0">
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-green-900 text-green-200 hover:bg-green-800"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 rounded-lg bg-red-950 text-red-300 hover:bg-red-900"
+              >
+                Excluir
+              </button>
+
+            </div>
+          </li>
+
+
+          
+
+          
         </ul>
 
         <p class="mt-4 text-sm text-gray-400">
           2 tarefas pendentes
         </p>
+        
 
       </section>
 
